@@ -7,7 +7,7 @@ let pass = $("pass");
 
 $(function(){
     listar();
-    guardar();
+    // guardar();
 });
 
 function listar(){
@@ -36,11 +36,19 @@ function datos(){
     let data = [];
     data.push(
         {"nombre":"nombretest", "apellido":"apellidotest", "correo_electronico":"correotest", "contraseña":"contraseñartest"},
-    );
+        // {"nombre":$(this."#frm")}
+        );
 
-    let usuarios = {"data": data};
+
+
+
+
+    let usuarios = {"data": frm};
     return usuarios;
 }
+
+
+
 
 function guardar(){
     let json = JSON.stringify(datos());
