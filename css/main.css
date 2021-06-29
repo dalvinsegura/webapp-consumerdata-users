@@ -1,9 +1,139 @@
-body{
-    background: #c4c4c4;
+:root{
+    --user-icon-c: steelblue;
+    --border-r-content: 10px;
+    --h3-c: #fff; 
+    --p-c: #c4c4c4;
+    --h3-fontsize: 0.9rem;
+    --p-fontsize: 1.3rem;
+
+    --bg-1: #c4c4c4;
+    --bg-2: rgb(88, 88, 88);
+
+    --title-font: 'Lato', sans-serif;
+    --data-user-p-font: 'Open Sans', sans-serif;
+
+    font-size: 13px;
+    
 
 }
 
-.main{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.all-user{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 1rem 4rem 2rem;
+    position: absolute;
+    top: 10%;
+    
+}
+
+.data_usuarios{
+    background: var(--bg-1);
+    width: 100%;
+    border-radius: var(--border-r-content) var(--border-r-content);
+    /* margin: 4% 2%; */
+}
+
+.data_user_content{
+    width: 100%;
+    background: var(--bg-2);
+    border-radius: 0 0 var(--border-r-content) var(--border-r-content);
+    display: flex;
+    flex-direction: column;
+}
+
+.user_icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .user_icon i{
+
+        font-size: 2.8rem;
+        color: var(--user-icon-c);
+        padding: 0.9375rem 0;
+    }
+
+.data_user{
+    width: 90%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0.9375rem 0 0 0;
+    
+}
+
+.data_usuarios:hover{
+    transform: scale(1.03,1.03);
+    box-shadow: 0 0 6px 0.0625rem rgb(100, 100, 100);
+    transition: all .3s ease-out;
+}
+
+
+
+.data_user:first-child{
+    padding: 1.25rem 0 0 0;
+    
+}
+
+.data_user:last-child{
+    padding: 15px 0 1.25rem 0;
+
+}
+
+.data_user .tittle{
+    color: var(--h3-c);
+    font-size: var(--h3-fontsize);
+    font-family: var(--title-font);
+    font-weight: 400;
+}
+
+.data_user .data-user-paragraph{
+    color: var(--p-c);
+    font-size: var(--p-fontsize);
+    font-family: var(--data-user-p-font);
+    font-weight: 700;
+    
+}
+
+.btn-register{
+    height: 3%;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.btn-all-user{
+    height: 3%;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    visibility: hidden;
+}
+
+
+/* FORM */
+
+
+.form-content{
     background: #4300bb;
     border-radius: 20px;
     margin: 6% auto 0 auto;
@@ -11,16 +141,9 @@ body{
     justify-content: center;
     flex-direction: column;
     width: 40%;
-    
+    visibility: hidden;
 }
 
-h1{
-    margin: 0 auto;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 25px 0 25px 0;
-}
 
 form{
     display: flex;
@@ -29,6 +152,7 @@ form{
     width: 60%;
     margin: 0 auto;
     text-align: center;
+
 }
 
 #nombre, #apellido, #correo_electronico, #contraseña{
@@ -53,3 +177,5 @@ form{
 .submit:active{
 border: green 2px solid;
 }
+
+/*  */

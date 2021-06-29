@@ -1,6 +1,6 @@
 <?php
 
-include'conexion.php';
+include'./conexion.php';
 
 $sql = "INSERT INTO register (nombre, apellido, correo_electronico, contraseña) VALUES (?,?,?,?)";
 $statement = $dbh->prepare($sql);

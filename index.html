@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
-
-    <div style="margin: 0 auto; width: 100px; text-align: center; background: blue; color: #fff;">
-        <a style="color: #fff; padding: 10px; text-align: center;" href="./form.html">¡Registrate Aqui!</a>
-    </div>
-
-    <div id="data_enviada"></div>
-    <div id="data_usuarios"></div>
+    <button id="btn-register" class="btn-register">Registrar Usuario</button>
+    <button id="btn-all-user" class="btn-all-user">Todos los Usuarios</button>
     
+    <div id="data_enviada"></div>
+
+
+    <div class="form-content" id="form-content">
+        <div id="mensajexd"></div>
+
+        <form id="frm">
+            <input type="text" name="id" style="display:none;">
+            <input type="text" name="nombre" class="nombre" id="nombre" placeholder="Nombre...">
+            <input type="text" name="apellido" class="apellido" id="apellido" placeholder="Apellido...">
+            <input type="text" name="correo_electronico" class="correo_electronico" id="correo_electronico" placeholder="Correo Electronico...">
+            <input type="password" name="contraseña" class="contraseña" id="contraseña" placeholder="Contraseña...">
+            <input class="submit" type="submit" value="REGISTRAR">
+        </form>
+
+    </div> 
+
+    <!--  -->
+
+
+    <div id="all-user" class="all-user"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/formdata.js"></script>
+
 </body>
 </html>
